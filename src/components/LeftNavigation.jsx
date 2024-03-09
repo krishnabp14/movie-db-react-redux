@@ -16,10 +16,10 @@ const LeftNavigation = () => {
     }
 
     return (
-        <div className='p-4 h-screen overflow-y-auto'>
+        <div className='p-4 h-screen overflow-y-auto bg-zinc-950' >
             <img src={"https://movies-for-all.netlify.app/static/media/logo.bcc287ea.svg"} className="my-8"/>
-            <div className="p-4">
-                <h1 className='mb-4'>
+            <div className="p-4 ml-2 mt-2">
+                <h1 className='mb-6 text-slate-200'>
                     DISCOVER
                 </h1>
 
@@ -29,14 +29,14 @@ const LeftNavigation = () => {
                     <h1 className="p-2 text-slate-400 text-sm" onClick={() => handleOnClickCategory("upcoming")}>Upcoming</h1>
                 </div>
 
-                <h1 className='mt-8 mb-4'>
+                <h1 className='mt-8 mb-6 text-slate-200'>
                     GENRES
                 </h1>
 
                 <div className='pl-2'>
                     {
                         genres.map((genre) => (
-                            <h1 key={genre} className="p-2 text-slate-400 text-sm" onClick={() => handleOnClickCategory(genre)}>{genre}</h1>
+                            <h1 key={genre} className="p-2 mt-1 text-slate-400 text-sm" onClick={() => handleOnClickCategory(genre)}>{genre}</h1>
                         ))
                     }
                 </div>

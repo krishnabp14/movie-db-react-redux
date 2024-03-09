@@ -49,14 +49,14 @@ const MovieList = () => {
     }, [page, category])
 
     return (
-        <>
+        <div className='bg-zinc-950'>
             <div ref={movieListRef}></div>
-            <div className='flex flex-col text-center justify-center mt-32'>
-                <h1 className='font-extrabold text-3xl text-slate-700'>Where Quality & Clarity Matters</h1>
+            <div className='flex flex-col text-center justify-center pt-32'>
+                <h1 className='font-extrabold text-3xl text-slate-300'>Where Quality & Clarity Matters</h1>
                 <h1 className='font-semibold text-md text-slate-500 mt-4'>Watch Bollywood, Tollywood in HD, exclusively available on movies.net</h1>
                 <h1 className='font-semibold text-md text-slate-500'>Developed for smartphone, tablets, PC and TV.</h1>
             </div>
-            <div className="text-center my-12 pl-10">
+            <div className="text-center my-12 pl-10 text-slate-200">
                     <h1 className="font-extralight text-2xl">{category.toLocaleUpperCase()}</h1>
                     <h1 className="font-bold text-xs mt-1 mb-4">MOVIES</h1>
             </div>
@@ -79,7 +79,7 @@ const MovieList = () => {
                 <button className='bg-slate-700 text-white p-2 rounded-3xl w-24' onClick={onClickPrev}> {"Prev"} </button>
                 <button className='bg-slate-700 text-white p-2 rounded-3xl w-24' onClick={onClickNext}> {"Next"} </button>
             </div>
-        </>
+        </div>
     )
 }
 
