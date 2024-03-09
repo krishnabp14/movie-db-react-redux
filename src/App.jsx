@@ -1,19 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
 import Homepage from "./pages/Homepage";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
 
   return (
     <>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/signin" element={<Signin />}></Route>
-          <Route path="/signup" element={<Signup />}></Route>
           <Route path="/" element={<Homepage />}></Route>
+          <Route path="/discover/:category" element={<Homepage />}></Route>
         </Routes>
       </BrowserRouter>
+      </Provider>
     </>
   )
 }
